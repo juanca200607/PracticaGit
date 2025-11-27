@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PruebaWeb - Home</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">PruebaWeb</a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#features">Características</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Home de prueba profesional</h1>
+          <p>
+            Esta es una página de inicio de prueba creada con buenas prácticas
+            de HTML, CSS y JavaScript moderno.
+          </p>
+          <a href="#features" class="btn btn-primary">Ver características</a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <p>100% responsive</p>
+            <p>ES6 listo</p>
+            <p>Diseño limpio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Características principales</h2>
+        <div class="features-grid">
+          <article class="feature-item">
+            <h3>Estructura clara</h3>
+            <p>Separación en archivos HTML, CSS y JS para un mantenimiento sencillo.</p>
+          </article>
+          <article class="feature-item">
+            <h3>Diseño adaptable</h3>
+            <p>Layout preparado para verse bien en móviles, tablets y escritorio.</p>
+          </article>
+          <article class="feature-item">
+            <h3>Código moderno</h3>
+            <p>Uso de JavaScript ES6 con funciones limpias y reutilizables.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2>Contacto de prueba</h2>
+        <p>Esta sección simula un área de contacto para tu futura landing real.</p>
+        <button class="btn btn-outline" type="button">Llamar a la acción</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="currentYear"></span> PruebaWeb. Todos los derechos reservados.</p>
+      <a href="#hero" class="back-to-top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
