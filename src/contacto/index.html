@@ -1,0 +1,83 @@
+<section id="contacto" class="contact-section">
+  <div class="contact-container">
+    <header class="contact-header">
+      <h2>Contacto</h2>
+      <p>Cuéntanos en qué podemos ayudarte y te responderemos lo antes posible.</p>
+    </header>
+
+    <div class="contact-content">
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="contactName">Nombre completo</label>
+          <input
+            type="text"
+            id="contactName"
+            name="name"
+            placeholder="Tu nombre"
+            required
+            autocomplete="name"
+          />
+          <span class="error-message" data-for="contactName"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail">Correo electrónico</label>
+          <input
+            type="email"
+            id="contactEmail"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required
+            autocomplete="email"
+          />
+          <span class="error-message" data-for="contactEmail"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contactMessage">Mensaje</label>
+          <textarea
+            id="contactMessage"
+            name="message"
+            rows="4"
+            placeholder="Escribe tu mensaje"
+            required
+          ></textarea>
+          <span class="error-message" data-for="contactMessage"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Enviar mensaje
+        </button>
+
+        <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-info">
+        <h3>Información de contacto</h3>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email:</span>
+            <a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a>
+          </li>
+          <li>
+            <span class="contact-label">Teléfono:</span>
+            <a href="tel:+34123456789">+34 123 456 789</a>
+          </li>
+          <li>
+            <span class="contact-label">Dirección:</span>
+            <span>Calle Ejemplo 123, Ciudad, País</span>
+          </li>
+        </ul>
+
+        <div class="contact-social">
+          <h4>Síguenos</h4>
+          <ul class="social-list">
+            <li><a href="#" aria-label="Ir a nuestro perfil de Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="Ir a nuestro perfil de Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Ir a nuestro perfil de LinkedIn">LinkedIn</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
