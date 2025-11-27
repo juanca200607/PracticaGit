@@ -1,0 +1,237 @@
+/* 1. Variables y Reset Básico */
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #28a745; /* Verde para acciones */
+    --dark-bg: #1a1a1a; /* Fondo oscuro principal */
+    --light-text: #f0f0f0; /* Color de texto claro */
+    --card-bg: #2b2b2b; /* Fondo de las tarjetas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Encabezado y Navegación */
+header {
+    background: #000000;
+    padding: 15px 0;
+    position: sticky; /* Menú fijo al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon a {
+    color: var(--secondary-color) !important;
+}
+
+/* 3. Sección Héroe */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Reemplaza 'hero-bg.jpg' */
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecer imagen de fondo */
+    background-blend-mode: multiply;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* 4. Botones */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #1e7e34;
+}
+
+/* 5. Sección de Productos (Cuadrícula) */
+.products-grid {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.products-grid h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    /* Crea una cuadrícula de 3 columnas que se ajusta */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    margin: 10px 0;
+    color: var(--light-text);
+}
+
+.product-card .platform {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 6. Pie de Página */
+footer {
+    background: #000000;
+    color: #999;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--light-text);
+}
+
+/* 7. Medios de Consulta (Responsividad básica para pantallas más pequeñas) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
